@@ -4,6 +4,8 @@ function fn_exists{ declare -f $1 >/dev/null; }
 #####################################################################
 # Parse flags passed to it. Flags must be pre-defined using 
 # `define_flag` before calling this.
+#
+# TODO: implement short flags
 # 
 # Typical usage:
 # 
