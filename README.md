@@ -7,7 +7,7 @@ To use this library, include this script in your project and:
 
 ~~~ bash
 # source this script
-source args.bash
+source flags.bash
 
 # declare your flags, e.g.:
 declare_flag 'num' 0 'Number of elements.'
