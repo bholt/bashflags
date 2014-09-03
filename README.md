@@ -1,4 +1,4 @@
-flags.bash
+BashFlags
 =========
 
 Stand-alone command-line argument parsing for bash, in the style of Google's `gflags` library.
