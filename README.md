@@ -5,7 +5,7 @@ Stand-alone command-line argument parsing for bash, in the style of Google's `gf
 
 To use this library, include this script in your project and:
 
-~~~ bash
+~~~bash
 # source this script
 source flags.bash
 
@@ -20,4 +20,24 @@ echo "Num: $FLAGS_num"
 
 # get extra args (those after --)
 echo "Extra: $FLAGS_extra"
+~~~
+
+## Git subtree
+You can include this library as a subdirectory in your git project as follows:
+
+~~~bash
+git remote add bashflags git@github.com:bholt/bashflags.git
+git fetch bashflags
+git merge -s ours --no-commit bashflags/master
+git read-tree --prefix=third-party/bashflags -u bashflags/master
+git com -m"import bashflags utility from github"
+~~~
+
+To update to a newer version of the utility:
+
+~~~bash
+# if you haven't already, add the remote:
+git remote add bashflags git@github.com:bholt/bashflags.git
+# pull down the changes and commit them (enter a helpful commit message)
+git pull -s subtree --squash bashflags master
 ~~~
