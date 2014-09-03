@@ -38,6 +38,8 @@ To update to a newer version of the utility:
 ~~~bash
 # if you haven't already, add the remote:
 git remote add bashflags git@github.com:bholt/bashflags.git
-# pull down the changes and commit them (enter a helpful commit message)
+# pull down the changes
 git pull -s subtree --squash bashflags master
+# commit the changes as a single commit (enter a helpful commit message)
+git commit -m"update bashflags"
 ~~~
