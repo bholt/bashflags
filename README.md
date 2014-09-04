@@ -26,11 +26,7 @@ echo "Extra: $FLAGS_extra"
 You can include this library as a subdirectory in your git project as follows:
 
 ~~~bash
-git remote add bashflags git@github.com:bholt/bashflags.git
-git fetch bashflags
-git merge -s ours --no-commit bashflags/master
-git read-tree --prefix=third-party/bashflags -u bashflags/master
-git com -m"import bashflags utility from github"
+git subtree add --squash --prefix=third-party/bashflags git@github.com:bholt/bashflags.git master
 ~~~
 
 To update to a newer version of the utility:
