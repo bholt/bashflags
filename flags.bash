@@ -54,7 +54,6 @@ function parse_flags {
       #   echo "pos: $1"
       #   ;;
     esac
-    echo ">> $flag -> $val" >&2
     if [[ $flag ]]; then
       if fn_exists "__handle_flag_$flag"; then
         eval "__handle_flag_$flag $val"
