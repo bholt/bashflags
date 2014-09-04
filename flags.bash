@@ -131,6 +131,7 @@ function define_bool_flag {
   long_name=$1
   desc=$3
   short_name=$4
+  default=false
   
   FLAGS_help_msg="$FLAGS_help_msg
   --$long_name=$default  $desc" 
