@@ -30,7 +30,7 @@ function fn_exists { declare -f $1 >/dev/null; }
 #   remaining args -> -extra
 #
 #####################################################################
-function parse_flags {  
+function parse_flags {
   while (( "$#" )); do
     flag=
     case $1 in
@@ -59,7 +59,7 @@ function parse_flags {
         eval "__handle_flag_$flag $val"
       else
         echo ">> invalid flag: $flag";
-        exit 1
+        exit 0
       fi
     fi
     shift
